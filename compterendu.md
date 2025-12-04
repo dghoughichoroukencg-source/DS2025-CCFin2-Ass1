@@ -1,5 +1,6 @@
 
 							Diagnostic du Cancer du Sein (Wisconsin Breast Cancer Diagnostic Dataset)
+							
 							![WhatsApp Image 2025-10-27 à 13 39 11_c6ff40d2](https://github.com/user-attachments/assets/783bad8f-598e-4f0c-9248-9cffb92b717c)
 							DGHOUGHI CHOROUK S7 FIN2
 
@@ -60,9 +61,7 @@ Régression Logistique	0.947	0.945
 SVM (RBF)	0.955	0.954
 Random Forest	0.962	0.961
 <img width="530" height="455" alt="image" src="https://github.com/user-attachments/assets/5010e818-900c-43c5-944f-d4d6b7908f26" />
-<img width="1489" height="990" alt="image" src="https://github.com/user-attachments/assets/b5213742-b019-48e7-82be-3a678228f2ab" />
-<img width="1489" height="990" alt="image" src="https://github.com/user-attachments/assets/cef1b392-2bb0-46ad-8143-a7de4a4ce676" />
-<img width="1489" height="990" alt="image" src="https://github.com/user-attachments/assets/23013c0e-2638-4c67-b8bd-59b0d331e831" />
+
 
 
 
