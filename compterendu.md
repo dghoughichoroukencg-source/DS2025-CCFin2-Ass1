@@ -1,7 +1,18 @@
 
 							Diagnostic du Cancer du Sein (Wisconsin Breast Cancer Diagnostic Dataset)
 							
-							![WhatsApp Image 2025-10-27 à 13 39 11_c6ff40d2](https://github.com/user-attachments/assets/783bad8f-598e-4f0c-9248-9cffb92b717c)
+![WhatsApp Image 2025-10-27 à 13 39 11_c6ff40d2](https://github.com/user-attachments/assets/9ee314b8-ab5e-44c0-90c4-bf2269a4c495)
+
+
+
+
+
+
+
+
+
+
+							
 							DGHOUGHI CHOROUK S7 FIN2
 
 							
