@@ -1,4 +1,25 @@
-                            Diagnostic du Cancer du Sein (Wisconsin Breast Cancer Diagnostic Dataset)
+
+							Diagnostic du Cancer du Sein (Wisconsin Breast Cancer Diagnostic Dataset)
+
+	Sélection du jeu de données
+Le jeu de données Breast Cancer Wisconsin Diagnostic est un choix pertinent car il est largement utilisé pour des tâches réelles de classification médicale concernant le diagnostic du cancer du sein. Il provient du UCI Machine Learning Repository, ce qui garantit la qualité, la robustesse et le contexte scientifique des données. Ce dataset est plus complexe et riche que des jeux simples comme Titanic ou Iris. Il est fréquemment utilisé pour évaluer des algorithmes d'apprentissage supervisé dans un contexte médical critique.
+
+Définition de la problématique
+C'est un problème de classification binaire supervisée. L'objectif est de prédire si une tumeur mammaire est maligne (cancéreuse) ou bénigne (non-cancéreuse) à partir de caractéristiques mesurées sur des images de cytologie.
+Classes cibles : 0 = Malignant (Maligne), 1 = Benign (Bénigne).
+L’enjeu est l'aide au diagnostic médical, une application vitale.
+Dictionnaire des données (métadonnées)
+Taille : 569 échantillons (lignes).
+Variables : 30 variables numériques descriptives (features) + 1 variable cible (target).
+Types de variables : Toutes les features sont numériques continues.
+Signification des variables : caractéristiques morphologiques extraites d’images de biopsies, par exemple :
+mean radius : moyenne des rayons des noyaux cellulaires
+mean texture : moyenne des variations de texture
+mean perimeter : moyenne du périmètre
+mean area : moyenne de la surface
+mean smoothness : moyenne de la douceur de la surface Target : 0 ou 1, indiquant si la tumeur est maligne ou bénigne, respectivement. Ce dataset est adapté pour appliquer des méthodes avancées de Machine Learning sur données médicales, et il nécessite un bon prétraitement et une analyse rigoureuse car les features sont nombreuses et corrélées.Ainsi, ce choix répond bien à vos critères de pertinence, complexité et objectifs d’analyse supervisée de classification médicale.
+
+
 1. Introduction
   1.1 Contexte
 Le cancer du sein constitue la première cause de mortalité par cancer chez les femmes. L’amélioration du diagnostic précoce repose notamment sur l’analyse automatisée d’images cytologiques. Le dataset Wisconsin Breast Cancer Diagnostic (WDBC) fournit un ensemble de mesures morphologiques extraites d’images de biopsies mammaires. Chaque observation décrit les propriétés géométriques et texturales des noyaux cellulaires, permettant de distinguer les tumeurs bénignes des tumeurs malignes.
@@ -29,6 +50,9 @@ Modèle	Accuracy (CV)	F1-Score (Macro)
 Régression Logistique	0.947	0.945
 SVM (RBF)	0.955	0.954
 Random Forest	0.962	0.961
+<img width="530" height="455" alt="image" src="https://github.com/user-attachments/assets/5010e818-900c-43c5-944f-d4d6b7908f26" />
+
+
 Le Random Forest obtient les meilleurs résultats et a été retenu pour l’évaluation finale. Sur le jeu de test, il atteint une accuracy de 0.965 et un F1-score de 0.964, ce qui dépasse les performances de nombreux diagnostics manuels rapportés dans la littérature. Le ROC-AUC de 0.992 confirme la capacité du modèle à bien séparer les deux classes, même avec un léger déséquilibre des observations.
 3.2 Analyse des erreurs
 L’examen de la matrice de confusion révèle :
