@@ -1,10 +1,17 @@
 
 							Diagnostic du Cancer du Sein (Wisconsin Breast Cancer Diagnostic Dataset)
+							![WhatsApp Image 2025-10-27 à 13 39 11_c6ff40d2](https://github.com/user-attachments/assets/783bad8f-598e-4f0c-9248-9cffb92b717c)
+							DGHOUGHI CHOROUK S7 FIN2
 
-	Sélection du jeu de données
+							
+
+
+DESCRIPTION DE LA PROBLEMATIQUE :
+<img width="2822" height="949" alt="14" src="https://github.com/user-attachments/assets/86e9461a-fa8c-4e78-a363-f6833e7540ac" />
+
+	
 Le jeu de données Breast Cancer Wisconsin Diagnostic est un choix pertinent car il est largement utilisé pour des tâches réelles de classification médicale concernant le diagnostic du cancer du sein. Il provient du UCI Machine Learning Repository, ce qui garantit la qualité, la robustesse et le contexte scientifique des données. Ce dataset est plus complexe et riche que des jeux simples comme Titanic ou Iris. Il est fréquemment utilisé pour évaluer des algorithmes d'apprentissage supervisé dans un contexte médical critique.
 
-Définition de la problématique
 C'est un problème de classification binaire supervisée. L'objectif est de prédire si une tumeur mammaire est maligne (cancéreuse) ou bénigne (non-cancéreuse) à partir de caractéristiques mesurées sur des images de cytologie.
 Classes cibles : 0 = Malignant (Maligne), 1 = Benign (Bénigne).
 L’enjeu est l'aide au diagnostic médical, une application vitale.
@@ -37,6 +44,8 @@ Une normalisation par StandardScaler a été appliquée. Étant donné les forte
 Enfin, des variables dérivées ont été construites (par exemple ratios géométriques et produits liés à la compacité) afin d’améliorer la capacité discriminante du modèle.
     2.2 Analyse exploratoire
 Les distributions et les corrélations ont été examinées pour comprendre la structure interne du jeu de données. Les tumeurs malignes présentent systématiquement des dimensions cellulaires plus élevées, des contours plus irréguliers et une texture plus hétérogène. La heatmap des corrélations confirme la redondance entre les mesures géométriques brutes et leurs dérivés, orientant ultérieurement les choix en matière de sélection ou de régularisation.
+<img width="1489" height="990" alt="image" src="https://github.com/user-attachments/assets/f7633e6f-c26a-4b23-b932-0baa68eb5c37" />
+
     2.3 Modélisation
 Trois modèles ont été sélectionnés pour leur complémentarité théorique :
 -	Régression Logistique : modèle linéaire interprétable, utilisé comme baseline pour évaluer la difficulté intrinsèque du problème.
@@ -51,6 +60,12 @@ Régression Logistique	0.947	0.945
 SVM (RBF)	0.955	0.954
 Random Forest	0.962	0.961
 <img width="530" height="455" alt="image" src="https://github.com/user-attachments/assets/5010e818-900c-43c5-944f-d4d6b7908f26" />
+<img width="1489" height="990" alt="image" src="https://github.com/user-attachments/assets/b5213742-b019-48e7-82be-3a678228f2ab" />
+<img width="1489" height="990" alt="image" src="https://github.com/user-attachments/assets/cef1b392-2bb0-46ad-8143-a7de4a4ce676" />
+<img width="1489" height="990" alt="image" src="https://github.com/user-attachments/assets/23013c0e-2638-4c67-b8bd-59b0d331e831" />
+
+
+
 
 
 Le Random Forest obtient les meilleurs résultats et a été retenu pour l’évaluation finale. Sur le jeu de test, il atteint une accuracy de 0.965 et un F1-score de 0.964, ce qui dépasse les performances de nombreux diagnostics manuels rapportés dans la littérature. Le ROC-AUC de 0.992 confirme la capacité du modèle à bien séparer les deux classes, même avec un léger déséquilibre des observations.
@@ -60,8 +75,11 @@ L’examen de la matrice de confusion révèle :
 	1 faux négatif (tumeur maligne classée bénigne)
 Les faux positifs concernent des cas morphologiquement atypiques présentant des caractéristiques proches de certaines tumeurs malignes (dimensions légèrement élevées, contours irréguliers). Le faux négatif correspond à une tumeur maligne de petite taille, mais présentant une agressivité particulière non entièrement capturée par les descripteurs fournis.
 Les variables les plus discriminantes identifiées par l’analyse des importances du modèle sont : mean radius, mean perimeter, mean area, concavity et texture variance. Cette hiérarchie est cohérente avec les critères cliniques classiques d’évaluation cytologique.
+<img width="1592" height="1570" alt="image" src="https://github.com/user-attachments/assets/de3ddebe-0cb2-4bec-94b4-d015e233d7ee" />
+
    3.3 Discussion
 Le Random Forest démontre une capacité supérieure à modéliser les interactions complexes entre variables morphologiques. De plus, sa robustesse au bruit et aux redondances explique ses meilleures performances par rapport à la régression logistique. Le SVM obtient des résultats proches mais nécessite une calibration plus fine et reste plus coûteux en temps de calcul.
+<img width="1599" height="1454" alt="15" src="https://github.com/user-attachments/assets/675a1911-f046-463f-b046-2dd346a5df90" />
 
 4. Conclusion
    4.1 Limites du modèle
